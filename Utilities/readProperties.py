@@ -1,11 +1,13 @@
+import os
 import configparser
 
-
-config=configparser.ConfigParser(interpolation=None)
-config.read(".\\Configurations\\config.ini")
-
-class readConfig():
+class readConfig:
     @staticmethod
     def getURL():
-        url=config.get("main", 'baseURL')
-        return url;
+        config = configparser.ConfigParser(interpolation=None)
+        
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        config_path = os.path.join(base_dir, "..", "Configurations", "config.ini")
+        config.read(config_path)
+
+        return config.get("main", "baseURL")
