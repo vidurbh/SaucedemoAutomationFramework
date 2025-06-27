@@ -118,8 +118,3 @@ Supported browsers: `chrome`, `firefox`, `edge`
 
 ---
 
-##  Author
-
-**Vidurbh Raj**  
-QA Engineer | Python | Selenium | Automation  
-[GitHub](https://github.com/vidurbh)  
