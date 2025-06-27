@@ -43,7 +43,11 @@ cd SaucedemoAutomationFramework
 ### 2️ Install Dependencies
 
 ```bash
-python -m pip install -r requirements.txt
+
+python -m pip install -r requirements.txt (Windows Systems)
+
+python3 -m pip install --break-system-packages -r requirements.txt (Linux Based Systems)
+
 ```
 
 ---
