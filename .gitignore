@@ -1,0 +1,7 @@
+__pycache__/
+htmlcov/
+reports/
+*.pyc
+.env
+.idea/
+.vscode/
