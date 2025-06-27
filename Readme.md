@@ -6,17 +6,17 @@ This is a UI test automation framework built with **Pytest** and **Selenium**, u
 
 ##  Project Structure
 
+```
 Saucedemo/
-├── TestCases/ # All test case files
-├── PageObjects/ # Page Object classes
-├── Utilities/ # Logger, config reader, etc.
-├── testData/ # Test input data (valid/invalid users)
-├── reports/ # HTML reports (excluded via .gitignore)
-├── conftest.py # Browser setup and Pytest hooks
-├── requirements.txt # All required packages
-├── README.md # Project documentation
-
-
+├── TestCases/             # All test case files
+├── PageObjects/           # Page Object classes
+├── Utilities/             # Logger, config reader, etc.
+├── testData/              # Test input data (valid/invalid users)
+├── reports/               # HTML reports (excluded via .gitignore)
+├── conftest.py            # Browser setup and Pytest hooks
+├── requirements.txt       # All required packages
+├── README.md              # Project documentation
+```
 
 ---
 
@@ -33,51 +33,90 @@ Saucedemo/
 
 ##  How to Set Up
 
-### 1. Clone the Repo
+### 1️ Clone the Repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/saucedemo-qa-assignment.git
-cd saucedemo-qa-assignment
+git clone https://github.com/vidurbh/SaucedemoAutomationFramework.git
+cd SaucedemoAutomationFramework
+```
 
+### 2️ Install Dependencies
 
-2. Install Dependencies
-
-Basic Command
+```bash
 pip install -r requirements.txt
+```
 
-With HTML Report
+---
+
+##  How to Run Tests
+
+###  Basic Command
+
+```bash
+pytest -v
+```
+
+### ✅ With HTML Report
+
+```bash
 pytest -v --html=reports/report.html
+```
 
-Cross-browser (Optional)
+### ✅ Cross-browser Testing
+
+```bash
 pytest -v --browser chrome
-
-
-```
-Test Scenarios Covered
-Login
-
-Valid/invalid credentials
-
-Locked-out user
-
-Sorting items
-
-A-Z, Z-A, Price Low-High, High-Low
-
-Verify Products Displayed
-
-Add to Cart & Validate Total
-
-Checkout Process
-
-Including Cancel and Finish button flows
-
-Logout
-
-Negative and Edge Case Tests
-
-Long inputs, removing items, back button behavior, etc.
-
 ```
 
+Supported browsers: `chrome`, `firefox`, `edge`
 
+---
+
+##  Test Scenarios Covered
+
+-  **Login**
+  - Valid credentials
+  - Invalid credentials
+  - Locked-out user
+
+-  **Sorting Items**
+  - Sort by Name (A-Z, Z-A)
+  - Sort by Price (Low to High, High to Low)
+
+-  **Verify Products Displayed**
+  - Ensure all products are visible on inventory page
+
+-  **Add to Cart & Validate Totals**
+  - Add products
+  - Check price summary and tax
+  - Validate final total
+
+-  **Checkout Process**
+  - Step 1: Enter info
+  - Step 2: Summary validation
+  - Cancel button validation
+  - Finish button validation
+
+-  **Logout**
+
+-  **Negative and Edge Case Tests**
+  - Empty credentials
+  - Wrong credentials
+  - Remove items from cart
+  - Back button behavior
+
+---
+
+##  Notes
+
+- All test credentials are publicly listed on [saucedemo.com](https://www.saucedemo.com).
+- `standard_user` is used for most successful flows.
+- Reports and `.pyc` cache are ignored via `.gitignore`.
+
+---
+
+##  Author
+
+**Vidurbh Raj**  
+QA Engineer | Python | Selenium | Automation  
+[GitHub](https://github.com/vidurbh)  
