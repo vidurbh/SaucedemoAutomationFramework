@@ -103,7 +103,6 @@ Supported browsers: `chrome`, `firefox`, `edge`
   - Empty credentials
   - Wrong credentials
   - Remove items from cart
-  - Back button behavior
 
 ---
 
