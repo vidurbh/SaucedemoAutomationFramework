@@ -53,19 +53,19 @@ pip install -r requirements.txt
 ###  Basic Command
 
 ```bash
-pytest -v
+python -m pytest -v
 ```
 
 ### ✅ With HTML Report
 
 ```bash
-pytest -v --html=reports/report.html
+python -m pytest -v --html=reports/report.html
 ```
 
 ### ✅ Cross-browser Testing
 
 ```bash
-pytest -v --browser chrome
+python -m pytest -v --browser chrome
 ```
 
 Supported browsers: `chrome`, `firefox`, `edge`
